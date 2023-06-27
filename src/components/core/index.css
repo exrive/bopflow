@@ -1,0 +1,428 @@
+
+@media screen and (max-width: 768px) {
+  .hidden-xs{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+.canvasWidthHeightClass{
+  /*top:2000px;*/
+  /*left:2000px;*/
+  position: absolute;
+
+}
+
+#Container{
+  overflow: scroll;
+  background: linear-gradient(rgba(254,254,254,0.8), rgba(254,254,254, 0.8)), url('~@/assets/images/grid.jpeg') repeat;
+}
+/*画布容器*/
+#efContainer {
+
+    position: relative;
+    flex: 1;
+  /* 网格背景图 */
+  background: linear-gradient(rgba(254,254,254,0.8), rgba(254,254,254, 0.8)), url('~@/assets/images/grid.jpeg') repeat;
+
+}
+
+/*顶部工具栏*/
+.ef-tooltar {
+    padding-left: 10px;
+    box-sizing: border-box;
+    height: 42px;
+    line-height: 42px;
+    z-index: 3;
+    border-bottom: 1px solid #DADCE0;
+}
+
+.jtk-overlay {
+    cursor: pointer;
+    color: #4A4A4A;
+  z-index: 102;
+}
+
+
+/*节点菜单*/
+.ef-node-pmenu {
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    width: 225px;
+    display: block;
+    font-weight: bold;
+    color: #4A4A4A;
+    padding-left: 5px;
+}
+
+.ef-node-pmenu:hover {
+    background-color: #E0E0E0;
+}
+
+.ef-node-menu-li {
+    color: #565758;
+    width: 150px;
+    border: 1px dashed #E0E3E7;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    padding-left: 8px;
+    background-color: #F0F7FF;
+}
+
+.ef-node-menu-li:hover {
+    /* 设置移动样式*/
+    cursor: move;
+    /*background-color: #F0F7FF;*/
+    background-color: #b7d7fc;
+    border: 1px dashed #1879FF;
+    border-left: 4px solid #1879FF;
+    padding-left: 5px;
+}
+
+.ef-node-menu-ul {
+    list-style: none;
+    padding-left: 20px
+}
+
+/*节点的最外层容器*/
+.ef-node-container {
+    position: absolute;
+    display: flex;
+    width: 170px;
+    height: 34px;
+    border: 1px solid #E0E3E7;
+    border-radius: 5px;
+    background-color: #F0F7FF;
+    z-index: 100;
+}
+
+.ef-node-container:hover {
+    /* 设置移动样式*/
+    cursor: move;
+    background-color: #F0F7FF;
+    /*box-shadow: #1879FF 0px 0px 12px 0px;*/
+    background-color: #b7d7fc;
+    border: 1px dashed #1879FF;
+}
+
+/*节点激活样式*/
+.ef-node-active {
+    background-color: #F0F7FF;
+    /*box-shadow: #1879FF 0px 0px 12px 0px;*/
+    background-color: #F0F7FF;
+    border: 1px solid #1879FF;
+}
+
+/*节点左侧的竖线*/
+.ef-node-left {
+    width: 4px;
+    background-color: #1879FF;
+    border-radius: 4px 0 0 4px;
+}
+
+/*节点左侧的图标*/
+.ef-node-left-ico {
+    line-height: 34px;
+    margin-left: 8px;
+}
+
+.ef-node-left-ico:hover {
+    /* 设置拖拽的样式 */
+    cursor: crosshair;
+}
+
+/*节点显示的文字*/
+.ef-node-text {
+    color: #565758;
+    font-size: 14px;
+    line-height: 34px;
+    margin-left: 8px;
+    width: 100px;
+    /* 设置超出宽度文本显示方式*/
+    white-space: nowrap;
+    over: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+/*节点右侧的图标*/
+.ef-node-right-ico {
+    line-height: 34px;
+    position: absolute;
+    right: 5px;
+    color: #84CF65;
+    cursor: default;
+}
+
+/*节点的几种状态样式*/
+.el-node-state-success {
+    line-height: 34px;
+    position: absolute;
+    right: 5px;
+    color: #84CF65;
+    cursor: default;
+}
+
+.el-node-state-error {
+    line-height: 32px;
+    position: absolute;
+    right: 5px;
+    color: #F56C6C;
+    cursor: default;
+}
+
+.el-node-state-warning {
+    line-height: 32px;
+    position: absolute;
+    right: 5px;
+    color: #E6A23C;
+    cursor: default;
+}
+
+.el-node-state-running {
+    line-height: 32px;
+    position: absolute;
+    right: 5px;
+    color: #84CF65;
+    cursor: default;
+}
+
+
+/*node-form*/
+.ef-node-form-header {
+    height: 32px;
+    border-top: 1px solid #dce3e8;
+    border-bottom: 1px solid #dce3e8;
+    background: #F1F3F4;
+    color: #000;
+    line-height: 32px;
+    padding-left: 12px;
+    font-size: 14px;
+}
+
+.ef-node-form-body {
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+.jtk-connector{
+  z-index: 100;
+}
+.jtk-endpoint{
+  z-index: 104;
+}
+/* 连线中的label 样式*/
+.jtk-overlay.flowLabel:not(.aLabel) {
+    padding: 4px 10px;
+    background-color: white;
+    color: #565758 !important;
+    border: 1px solid #E0E3E7;
+    border-radius: 5px;
+}
+.pdm-label {
+  font-size: 8px;
+  color: #7c98b7 !important;
+}
+/* label 为空的样式 */
+.emptyFlowLabel {
+}
+
+
+.ef-dot {
+    background-color: #1879FF;
+    border-radius: 10px;
+}
+
+.ef-dot-hover {
+    background-color: red;
+}
+
+.ef-rectangle {
+    background-color: #1879FF;
+}
+
+.ef-rectangle-hover {
+    background-color: red;
+}
+
+.ef-img {
+}
+
+.ef-img-hover {
+}
+
+
+.ef-drop-hover{
+    border: 1px dashed #1879FF;
+}
+
+
+.delete-node{
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  margin-right: 1px;
+  margin-top: 2px;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+.delete-node:hover{
+  color: #601a1a
+}
+
+
+
+
+
+/**
+ * 横向泳道
+ */
+.broadwiseLaneNode {
+  background-color: #b7d7fc;
+  /* 边框 */
+  border: 1px solid #40AFFE;
+  /* 圆角 */
+  border-radius: 2px;
+  /* 泛光 */
+  /*box-shadow: 0 0 15px #4E4E4E;*/
+  /* 高度 */
+  height: 40px;
+  /* 宽度 */
+  width: 80px;
+  /* 定位 */
+  position: absolute;
+  /* 鼠标样式 */
+  cursor: move;
+  /* 文字水平居中 */
+  text-align: center;
+  /* 文字垂直居中，与div的高度要保持一致 */
+  line-height: 40px;
+  /* 设置字间距 */
+  /*letter-spacing: 2px;*/
+  /*!* 背景渐变 *!*/
+  /*background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));*/
+  /*background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));*/
+}
+
+/**
+ * 在容器中的横向泳道
+ */
+.broadwiseLaneNodeOnContainer {
+  left: 0px;
+  /* 边框 */
+  border: 1px solid #777;
+  /* 圆角 */
+  border-radius: 5px;
+  /* 高度 */
+  height: 300px;
+  /* 宽度 */
+  width: 300px;
+  /* 定位 */
+  position: absolute;
+  /* 文字垂直居中，与div的高度要保持一致 */
+  line-height: 60px;
+  /* 设置字间距 */
+  letter-spacing: 2px;
+  /* 层叠顺序 */
+  z-index: 1;
+}
+
+
+/**
+ * 纵向泳道
+ */
+.directionLaneNode {
+  background-color: #b7d7fc;
+  /* 边框 */
+  border: 2px solid #40AFFE;
+  /* 圆角 */
+  border-radius: 5px;
+  /* 泛光 */
+  /*box-shadow: 0 0 15px #4E4E4E;*/
+  /* 高度 */
+  height: 40px;
+  /* 宽度 */
+  width: 80px;
+  /* 定位 */
+  position: absolute;
+  /* 鼠标样式 */
+  cursor: move;
+  /* 文字水平居中 */
+  text-align: center;
+  /* 文字垂直居中，与div的高度要保持一致 */
+  line-height: 40px;
+  /* 设置字间距 */
+  /*letter-spacing: 2px;*/
+  /*!* 背景渐变 *!*/
+  /*background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));*/
+  /*background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));*/
+}
+
+/**
+ * 在容器中的纵向泳道
+ */
+.directionLaneNodeOnContainer {
+  /* 边框 */
+  top: 0px;
+  border: 1px solid #777;
+  /* 圆角 */
+  border-radius: 5px;
+  /* 高度 */
+  height: 500px;
+  /* 宽度 */
+  width: 300px;
+  /* 定位 */
+  position: absolute;
+  /* 文字水平居中 */
+  text-align: center;
+  /* 文字垂直居中，与div的高度要保持一致 */
+  line-height: 50px;
+  /* 设置字间距 */
+  letter-spacing: 2px;
+  /* 层叠顺序 */
+  z-index: 1;
+}
+
+/**
+ * 泳道文本div块样式
+ */
+.laneLabelClass {
+  background-color: #b7d7fc;
+  /* 边框 */
+  border: 1px solid #333;
+  /* 文字水平居中 */
+  text-align: center;
+  /*!* 背景渐变 *!*/
+  /*background: linear-gradient(to right, rgb(252, 235, 0, 0.9), rgb(252, 235, 0, 0.8), rgb(252, 235, 0, 0.9));*/
+  /*background: -ms-linear-gradient(rgba(252, 235, 0, 0.9), rgba(252, 235, 0, 0.9));*/
+}
+
+.laneimg-broadwise{
+  background:  url('~@/assets/images/broadwise.png') no-repeat;
+
+}
+.laneimg-direction{
+
+  background:  url('~@/assets/images/direction.png') no-repeat;
+}
